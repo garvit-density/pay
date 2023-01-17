@@ -5,7 +5,7 @@ import TransferFund from "./TransferFund";
 import Reference from "./Reference";
 import Final from "./Final";
 
-function Middle({ activeStep, steps, setData }) {
+function Middle({ activeStep, steps, Data, setData }) {
   return (
     <Box sx={{ height: "350px" }}>
       {" "}
@@ -13,9 +13,13 @@ function Middle({ activeStep, steps, setData }) {
         <Final></Final>
       ) : (
         <>
-          {activeStep === 0 && <EnterAmount setData={setData}></EnterAmount>}
+          {activeStep === 0 && (
+            <EnterAmount Data={Data} setData={setData}></EnterAmount>
+          )}
           {activeStep === 1 && <TransferFund></TransferFund>}
-          {activeStep === 2 && <Reference setData={setData}></Reference>}
+          {activeStep === 2 && (
+            <Reference Data={Data} setData={setData}></Reference>
+          )}
           {/* here will add 4 components -- above  */}
         </>
       )}

@@ -3,8 +3,20 @@ import Box from "@mui/material/Box";
 import { Button, TextField, Typography } from "@mui/material";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Avatar from "@mui/material/Avatar";
-
-function EnterAmount({ setData }) {
+import { useState } from "react";
+function EnterAmount({ Data, setData }) {
+  const handleAccount = (event) => {
+    setData({ ...Data, accountNumber: event.target.value });
+    console.log(Data);
+  };
+  const handleDeposit = (event) => {
+    setData({ ...Data, depositAmount: event.target.value });
+    console.log(Data);
+  };
+  const handleDepositButton = (amount) => {
+    setData({ ...Data, depositAmount: amount });
+    console.log(Data);
+  };
   return (
     <Box
       sx={{
@@ -33,6 +45,8 @@ function EnterAmount({ setData }) {
           size="small"
           fullWidth
           inputProps={{ style: { color: "white" } }}
+          value={Data.accountNumber}
+          onChange={handleAccount}
         >
           {" "}
         </TextField>
@@ -71,22 +85,40 @@ function EnterAmount({ setData }) {
               style: { color: "white" },
             }}
             inputProps={{ style: { color: "white" } }}
+            value={Data.depositAmount}
+            onChange={handleDeposit}
           >
             {""}
           </TextField>
         </Box>
       </Box>
       <Box>
-        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+        <Button
+          variant="outlined"
+          sx={{ color: "#FFFFFF" }}
+          onClick={() => handleDepositButton(5000)}
+        >
           ₹ 5000
         </Button>
-        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+        <Button
+          variant="outlined"
+          sx={{ color: "#FFFFFF" }}
+          onClick={() => handleDepositButton(2000)}
+        >
           ₹ 2000
         </Button>
-        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+        <Button
+          variant="outlined"
+          sx={{ color: "#FFFFFF" }}
+          onClick={() => handleDepositButton(1000)}
+        >
           ₹ 1000
         </Button>
-        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+        <Button
+          variant="outlined"
+          sx={{ color: "#FFFFFF" }}
+          onClick={() => handleDepositButton(500)}
+        >
           ₹ 500
         </Button>
       </Box>

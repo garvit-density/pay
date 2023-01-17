@@ -2,7 +2,11 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { TextField } from "@mui/material";
 
-function Reference({ setData }) {
+function Reference({ Data, setData }) {
+  const handleReference = (event) => {
+    setData({ ...Data, referenceId: event.target.value });
+    console.log(Data);
+  };
   return (
     <Box
       sx={{
@@ -25,6 +29,8 @@ function Reference({ setData }) {
             style: { color: "white" },
           }}
           inputProps={{ style: { color: "white" } }}
+          value={Data.referenceId}
+          onChange={handleReference}
         >
           {" "}
         </TextField>
@@ -34,7 +40,7 @@ function Reference({ setData }) {
         <TextField
           variant="filled"
           size="small"
-          label="5000 this will be received from EnterAmount comp"
+          label={Data.depositAmount}
           disabled
           fullWidth
           InputLabelProps={{

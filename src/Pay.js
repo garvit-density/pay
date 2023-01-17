@@ -60,9 +60,15 @@ export default function Pay() {
       }}
     >
       {/* top progress bar  */}
+      {console.log(Data)}
       <Top activeStep={activeStep} steps={steps}></Top>
       {/* Middle Content  */}
-      <Middle activeStep={activeStep} steps={steps} setData={setData}></Middle>
+      <Middle
+        activeStep={activeStep}
+        steps={steps}
+        Data={Data}
+        setData={setData}
+      ></Middle>
       {/* Footer Below  */}
       <Footer
         activeStep={activeStep}
