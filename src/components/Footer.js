@@ -58,15 +58,31 @@ function Footer({ activeStep, steps, handleNext, handleBack, handleReset }) {
             width: "100%",
           }}
         >
+          <Box sx={{ flex: "1 1 auto" }} />
           <Button
-            color="inherit"
+            variant="outlined"
+            sx={{
+              color: "white",
+              borderColor: "white",
+              ":hover": {
+                borderColor: "white",
+              },
+            }}
             onClick={handleBack}
-            sx={{ mr: 1, color: "#FFFFFF" }}
           >
             {activeStep === 0 ? "Cancel" : "Back"}
           </Button>
-          <Box sx={{ flex: "1 1 auto" }} />
-          <Button onClick={handleNext} sx={{ color: "#FFFFFF" }}>
+          <Button
+            variant="contained"
+            sx={{
+              color: "black",
+              backgroundColor: "white",
+              ":hover": {
+                bgcolor: "white",
+              },
+            }}
+            onClick={handleNext}
+          >
             {activeStep === steps.length - 1 ? "Submit" : "Next"}
           </Button>
         </Box>
