@@ -55,12 +55,35 @@ export default function Pay() {
         }}
       >
         {/* top progress bar  */}
-        <Stepper activeStep={activeStep} alternativeLabel>
+        <Stepper activeStep={activeStep} alternativeLabel sx={{}}>
           {steps.map((label, index) => {
             const stepProps = {};
             const labelProps = {};
             return (
-              <Step key={label} {...stepProps}>
+              <Step
+                key={label}
+                {...stepProps}
+                sx={{
+                  "& .MuiStepLabel-root .Mui-completed": {
+                    color: "success.main", // circle color (COMPLETED)
+                  },
+                  "& .MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel":
+                    {
+                      color: "black", // Just text label (COMPLETED)
+                    },
+                  "& .MuiStepLabel-root .Mui-active": {
+                    color: "success.main", // circle color (ACTIVE)
+                  },
+                  "& .MuiStepLabel-label.Mui-active.MuiStepLabel-alternativeLabel":
+                    {
+                      // color: "common.white", // Just text label (ACTIVE)
+                      color: "black",
+                    },
+                  "& .MuiStepLabel-root .Mui-active .MuiStepIcon-text": {
+                    fill: "black", // circle's number (ACTIVE)
+                  },
+                }}
+              >
                 <StepLabel {...labelProps}>{label}</StepLabel>
               </Step>
             );
