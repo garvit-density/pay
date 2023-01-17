@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import { Button, TextField, Typography } from "@mui/material";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Avatar from "@mui/material/Avatar";
-import { useState } from "react";
+
 function EnterAmount({ Data, setData }) {
   const handleAccount = (event) => {
     setData({ ...Data, accountNumber: event.target.value });
