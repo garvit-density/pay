@@ -29,136 +29,162 @@ function Withdraw() {
         backgroundColor: "#1F1F24",
       }}
     >
-      <Typography sx={{ color: "white" }}>Withdraw INR</Typography>
-      <Box sx={{ paddingBottom: "2%" }}>
-        <Typography sx={{ color: "common.white" }}>
-          Entered Deposit Amount
+      <Box sx={{ pl: "40px", pr: "40px" }}>
+        <Typography sx={{ color: "white", fontSize: "28px" }}>
+          Withdraw INR
         </Typography>
-        <Box sx={{ display: "flex" }}>
-          <Box
-            sx={{
-              border: "1px solid",
-              borderColor: "#959595",
-              height: "46px",
-              width: "10%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Avatar
-              sx={{ backgroundColor: "black", width: "23%", height: "33%" }}
+        <Box sx={{ paddingBottom: "2%" }}>
+          <Typography sx={{ color: "#B3B3B3", size: "16px" }}>
+            Entered Deposit Amount
+          </Typography>
+          <Box sx={{ display: "flex" }}>
+            <Box
+              sx={{
+                border: "1px solid",
+                borderColor: "#959595",
+                height: "46px",
+                width: "10%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
-              {" "}
-              <CurrencyRupeeIcon sx={{ fontSize: "small" }}></CurrencyRupeeIcon>
-            </Avatar>
+              <Avatar
+                sx={{ backgroundColor: "black", width: "23%", height: "33%" }}
+              >
+                {" "}
+                <CurrencyRupeeIcon
+                  sx={{ fontSize: "small" }}
+                ></CurrencyRupeeIcon>
+              </Avatar>
 
-            <Typography sx={{ color: "#FFFFFF" }}>INR</Typography>
+              <Typography sx={{ color: "#FFFFFF" }}>INR</Typography>
+            </Box>
+            <TextField
+              variant="filled"
+              size="small"
+              fullWidth
+              label="Enter Deposit Amount"
+              InputLabelProps={{
+                style: { color: "white" },
+              }}
+              inputProps={{ style: { color: "white" } }}
+              value={DepositAmount}
+              onChange={handleDeposit}
+            >
+              {""}
+            </TextField>
           </Box>
-          <TextField
-            variant="filled"
-            size="small"
-            fullWidth
-            label="Enter Deposit Amount"
-            InputLabelProps={{
-              style: { color: "white" },
-            }}
-            inputProps={{ style: { color: "white" } }}
-            value={DepositAmount}
-            onChange={handleDeposit}
-          >
-            {""}
-          </TextField>
+          <Box>
+            <Button
+              variant="outlined"
+              sx={{ color: "#FFFFFF" }}
+              onClick={() => handleDepositButton(5000)}
+            >
+              ₹ 5000
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{ color: "#FFFFFF" }}
+              onClick={() => handleDepositButton(2000)}
+            >
+              ₹ 2000
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{ color: "#FFFFFF" }}
+              onClick={() => handleDepositButton(1000)}
+            >
+              ₹ 1000
+            </Button>
+            <Button
+              variant="outlined"
+              sx={{ color: "#FFFFFF" }}
+              onClick={() => handleDepositButton(500)}
+            >
+              ₹ 500
+            </Button>
+          </Box>
         </Box>
         <Box>
-          <Button
-            variant="outlined"
-            sx={{ color: "#FFFFFF" }}
-            onClick={() => handleDepositButton(5000)}
-          >
-            ₹ 5000
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{ color: "#FFFFFF" }}
-            onClick={() => handleDepositButton(2000)}
-          >
-            ₹ 2000
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{ color: "#FFFFFF" }}
-            onClick={() => handleDepositButton(1000)}
-          >
-            ₹ 1000
-          </Button>
-          <Button
-            variant="outlined"
-            sx={{ color: "#FFFFFF" }}
-            onClick={() => handleDepositButton(500)}
-          >
-            ₹ 500
-          </Button>
-        </Box>
-      </Box>
-      <Box>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography sx={{ color: "#FFFFFF" }}>Account Number</Typography>
-          <Box sx={{ display: "flex" }}>
-            <Typography sx={{ color: "#FFFFFF" }}>
-              PAGARPAY INDIA PRIVATE LIMITED
-            </Typography>
-          </Box>
-        </Box>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography sx={{ color: "#FFFFFF" }}>Account IFSC Code</Typography>
-          <Box sx={{ display: "flex" }}>
-            <Typography sx={{ color: "#FFFFFF" }}>
-              0937480SBXHBA2E12E
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-      <Box>
-        <Box
-          maxWidth="md"
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            pt: 1,
-            pb: 1,
-            backgroundColor: "#2C2C34",
-            width: "100%",
-          }}
-        >
-          <Box sx={{ flex: "1 1 auto" }} />
-          <Button
-            variant="outlined"
+          <Typography
             sx={{
               color: "white",
-              borderColor: "white",
-              ":hover": {
-                borderColor: "white",
-              },
+              fontSize: "20px",
+              fontWeight: "700",
+              padding: "8px",
             }}
-            // onClick={handleBack}
           >
-            Cancel
-          </Button>
-          <Button
-            variant="contained"
-            sx={{
-              color: "black",
-              backgroundColor: "white",
-              ":hover": {
-                bgcolor: "white",
-              },
-            }}
-            // onClick={handleNext}
-          >
-            Withdraw
-          </Button>
+            Bank Details
+          </Typography>
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography
+              sx={{ color: "#FFFFFF", padding: "10px", fontSize: "17px" }}
+            >
+              Account Number
+            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <Typography
+                sx={{ color: "#FFFFFF", padding: "10px", fontSize: "17px" }}
+              >
+                PAGARPAY INDIA PRIVATE LIMITED
+              </Typography>
+            </Box>
+          </Box>
+          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography
+              sx={{ color: "#FFFFFF", padding: "10px", fontSize: "17px" }}
+            >
+              Account IFSC Code
+            </Typography>
+            <Box sx={{ display: "flex" }}>
+              <Typography
+                sx={{ color: "#FFFFFF", padding: "10px", fontSize: "17px" }}
+              >
+                0937480SBXHBA2E12E
+              </Typography>
+            </Box>
+          </Box>
         </Box>
+      </Box>
+      <Box
+        maxWidth="md"
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          pt: 1,
+          pb: 1,
+          backgroundColor: "#2C2C34",
+          width: "100%",
+          justifyContent: "flex-end",
+        }}
+      >
+        <Button
+          variant="outlined"
+          sx={{
+            color: "white",
+            borderColor: "white",
+            ":hover": {
+              borderColor: "white",
+            },
+          }}
+          // onClick={handleBack}
+        >
+          Cancel
+        </Button>
+        <Button
+          variant="contained"
+          sx={{
+            color: "black",
+            backgroundColor: "white",
+            ":hover": {
+              bgcolor: "white",
+            },
+          }}
+          // onClick={handleNext}
+        >
+          Withdraw
+        </Button>
       </Box>
     </Container>
   );
