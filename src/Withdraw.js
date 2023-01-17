@@ -37,7 +37,7 @@ function Withdraw() {
           <Typography sx={{ color: "#B3B3B3", size: "16px" }}>
             Entered Deposit Amount
           </Typography>
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", pt: "10px" }}>
             <Box
               sx={{
                 border: "1px solid",
@@ -75,7 +75,7 @@ function Withdraw() {
               {""}
             </TextField>
           </Box>
-          <Box>
+          <Box sx={{ pt: "10px" }}>
             <Button
               variant="outlined"
               sx={{ color: "#FFFFFF" }}
@@ -154,8 +154,10 @@ function Withdraw() {
           flexDirection: "row",
           pt: 1,
           pb: 1,
+          pr: 1,
+          mt: "10px",
           backgroundColor: "#2C2C34",
-          width: "100%",
+          gap: "40px",
           justifyContent: "flex-end",
         }}
       >
