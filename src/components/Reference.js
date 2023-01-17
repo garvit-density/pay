@@ -1,25 +1,46 @@
 import React from "react";
-import { Box } from "@mui/material";
-import { Button, TextField } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import { TextField } from "@mui/material";
 
-function Reference() {
+function Reference({ setData }) {
   return (
-    <Box>
-      <Box>Reference</Box>
+    <Box
+      sx={{
+        //backgroundColor: "red",
+        marginTop: "2%",
+        marginLeft: "4%",
+        marginRight: "4%",
+      }}
+    >
+      <Typography sx={{ color: "common.white" }}>Reference</Typography>
       <Box sx={{ paddingBottom: "2%" }}>
-        <Box>Enter Reference ID </Box>
-        <TextField variant="filled" size="small" fullWidth>
+        <Typography sx={{ color: "common.white" }}>
+          Enter Reference ID{" "}
+        </Typography>
+        <TextField
+          variant="filled"
+          size="small"
+          fullWidth
+          InputLabelProps={{
+            style: { color: "white" },
+          }}
+          inputProps={{ style: { color: "white" } }}
+        >
           {" "}
         </TextField>
       </Box>
       <Box sx={{ paddingBottom: "2%" }}>
-        <Box>Deposit Amount</Box>
+        <Typography sx={{ color: "common.white" }}>Deposit Amount</Typography>
         <TextField
           variant="filled"
           size="small"
           label="5000 this will be received from EnterAmount comp"
           disabled
           fullWidth
+          InputLabelProps={{
+            style: { color: "white" },
+          }}
+          inputProps={{ style: { color: "white" } }}
         ></TextField>
       </Box>
     </Box>

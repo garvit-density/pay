@@ -1,10 +1,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import Avatar from "@mui/material/Avatar";
 
-function EnterAmount() {
+function EnterAmount({ setData }) {
   return (
     <Box
       sx={{
@@ -21,17 +21,26 @@ function EnterAmount() {
           paddingBottom: "1%",
         }}
       >
-        <Box>Enter Amount</Box>
+        <Typography sx={{ color: "common.white" }}>Enter Amount</Typography>
         <img src={require("../assets/imps.png")} alt="imps" />
       </Box>
       <Box sx={{ paddingBottom: "2%" }}>
-        <Box>Registered Account Number</Box>
-        <TextField variant="filled" size="small" fullWidth>
+        <Typography sx={{ color: "common.white" }}>
+          Registered Account Number
+        </Typography>
+        <TextField
+          variant="filled"
+          size="small"
+          fullWidth
+          inputProps={{ style: { color: "white" } }}
+        >
           {" "}
         </TextField>
       </Box>
       <Box sx={{ paddingBottom: "2%" }}>
-        <Box>Entered Deposit Amount</Box>
+        <Typography sx={{ color: "common.white" }}>
+          Entered Deposit Amount
+        </Typography>
         <Box sx={{ display: "flex" }}>
           <Box
             sx={{
@@ -51,18 +60,35 @@ function EnterAmount() {
               <CurrencyRupeeIcon sx={{ fontSize: "small" }}></CurrencyRupeeIcon>
             </Avatar>
 
-            <Box>INR</Box>
+            <Typography sx={{ color: "#FFFFFF" }}>INR</Typography>
           </Box>
-          <TextField variant="filled" size="small" fullWidth>
+          <TextField
+            variant="filled"
+            size="small"
+            fullWidth
+            label="Enter Deposit Amount"
+            InputLabelProps={{
+              style: { color: "white" },
+            }}
+            inputProps={{ style: { color: "white" } }}
+          >
             {""}
           </TextField>
         </Box>
       </Box>
       <Box>
-        <Button variant="outlined">₹ 5000</Button>
-        <Button variant="outlined">₹ 2000</Button>
-        <Button variant="outlined">₹ 1000</Button>
-        <Button variant="outlined">₹ 500</Button>
+        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+          ₹ 5000
+        </Button>
+        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+          ₹ 2000
+        </Button>
+        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+          ₹ 1000
+        </Button>
+        <Button variant="outlined" sx={{ color: "#FFFFFF" }}>
+          ₹ 500
+        </Button>
       </Box>
     </Box>
   );

@@ -25,47 +25,65 @@ function TransferFund() {
           paddingBottom: "1%",
         }}
       >
-        <Box>Transfer Fund to this Bank Account</Box>
+        <Typography sx={{ color: "#FFFFFF" }}>
+          Transfer Fund to this Bank Account
+        </Typography>
         <img src={require("../assets/imps.png")} alt="imps" />
       </Box>
       <Box>
         {" "}
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography>Beneficiary Entity</Typography>
+          <Typography sx={{ color: "#FFFFFF" }}>Beneficiary Entity</Typography>
           <Box sx={{ display: "flex" }}>
-            <Typography>PAGARPAY INDIA PRIVATE LIMITED</Typography>
+            <Typography sx={{ color: "#FFFFFF" }}>
+              PAGARPAY INDIA PRIVATE LIMITED
+            </Typography>
             <Button
-              startIcon={<ContentCopyIcon></ContentCopyIcon>}
+              startIcon={
+                <ContentCopyIcon sx={{ color: "white" }}></ContentCopyIcon>
+              }
               onClick={() => handleCopy("PAGARPAY INDIA PRIVATE LIMITED")}
             ></Button>
           </Box>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography>Baneficiary Account Number</Typography>
+          <Typography sx={{ color: "#FFFFFF" }}>
+            Baneficiary Account Number
+          </Typography>
           <Box sx={{ display: "flex" }}>
-            <Typography>0937480SBXHBA2E12E</Typography>
+            <Typography sx={{ color: "#FFFFFF" }}>
+              0937480SBXHBA2E12E
+            </Typography>
             <Button
-              startIcon={<ContentCopyIcon></ContentCopyIcon>}
+              startIcon={
+                <ContentCopyIcon sx={{ color: "white" }}></ContentCopyIcon>
+              }
               onClick={() => handleCopy("0937480SBXHBA2E12E")}
             ></Button>
           </Box>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography>Baneficiary IFSC Number </Typography>
+          <Typography sx={{ color: "#FFFFFF" }}>
+            Baneficiary IFSC Number{" "}
+          </Typography>
           <Box sx={{ display: "flex" }}>
-            <Typography>ESFB0003031</Typography>
+            <Typography sx={{ color: "#FFFFFF" }}>ESFB0003031</Typography>
             <Button
-              startIcon={<ContentCopyIcon></ContentCopyIcon>}
+              startIcon={
+                <ContentCopyIcon sx={{ color: "white" }}></ContentCopyIcon>
+              }
               onClick={() => handleCopy("ESFB0003031")}
             ></Button>
           </Box>
         </Box>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography>Bank Account Type </Typography>
+          <Typography sx={{ color: "#FFFFFF" }}>Bank Account Type </Typography>
           <Box sx={{ display: "flex" }}>
-            <Typography>CURRENT</Typography>
+            <Typography sx={{ color: "#FFFFFF" }}>CURRENT</Typography>
             <Button
-              startIcon={<ContentCopyIcon></ContentCopyIcon>}
+              startIcon={
+                <ContentCopyIcon sx={{ color: "white" }}></ContentCopyIcon>
+              }
               onClick={() => handleCopy("CURRENT")}
             ></Button>
           </Box>
