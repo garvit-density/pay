@@ -7,14 +7,10 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
 import { useState } from "react";
-import EnterAmount from "./components/EnterAmount";
-import TransferFund from "./components/TransferFund";
-import Reference from "./components/Reference";
 import green from "@mui/material/colors/green";
-import Final from "./components/Final";
-import Top from "./components/Top";
-import Middle from "./components/Middle";
-import Footer from "./components/Footer";
+import Top from "./Top";
+import Middle from "./Middle";
+import Footer from "./Footer";
 // 4 steps to be displayed on top progress bar (non-clickable)
 
 const steps = [

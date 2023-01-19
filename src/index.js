@@ -5,8 +5,6 @@ import App from "./App";
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      {/* <Pay /> */}
-      {/* <Withdraw /> */}
       <App></App>
     </StyledEngineProvider>
   </React.StrictMode>
